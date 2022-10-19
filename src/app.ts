@@ -14,11 +14,12 @@ const ul = document.querySelector('ul') as HTMLUListElement;
 const list = new ListTemplate(ul);
 //tupla
 let values : [string, string, number];
-values = [tofrom.value, details.value, amount.valueAsNumber]
 
 form.addEventListener('submit',(e:Event)=>{
     e.preventDefault();
     let doc: HassFormatter;
+	values = [tofrom.value, details.value, amount.valueAsNumber];
+	console.log (values);
 		if (type.value === 'invoice'){
 			//spread opperator
 			doc = new Invoice(...values);

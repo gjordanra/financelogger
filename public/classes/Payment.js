@@ -1,5 +1,6 @@
 export class Payment {
     constructor(client, details, amount) {
+        console.log(client, details, amount);
         this.recipient = client;
         this.details = details;
         this.amount = amount;

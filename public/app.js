@@ -11,10 +11,11 @@ const ul = document.querySelector('ul');
 const list = new ListTemplate(ul);
 //tupla
 let values;
-values = [tofrom.value, details.value, amount.valueAsNumber];
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     let doc;
+    values = [tofrom.value, details.value, amount.valueAsNumber];
+    console.log(values);
     if (type.value === 'invoice') {
         //spread opperator
         doc = new Invoice(...values);

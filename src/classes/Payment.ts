@@ -6,6 +6,7 @@ export class Payment implements HassFormatter {
     public amount: number;
 
     constructor (client:string, details:string, amount:number){
+        console.log (client, details, amount);
         this.recipient = client;
         this.details = details;
         this.amount = amount; 
